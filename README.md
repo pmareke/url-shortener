@@ -1,24 +1,13 @@
-# README
+# URL Shortener
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# TODO list
 
-Things you may want to cover:
+- [X] Create Rails app.
+- [X] Install Rspec.
+- [ ] Implement Shortener service.
+- [ ] Create Link model.
+- [ ] Create Link resource (only :create).
+- [ ] Add route to redirect from short url.
+- [ ] Add route to get info about a short url.
+- [ ] Add cache
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
