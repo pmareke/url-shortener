@@ -1,0 +1,5 @@
+<%= form_for @link do |form| %>
+  <%= form.label :url, "Link" %>
+  <%= form.text_field :url %>
+  <%= form.submit "Create short url" %>
+<% end %>
