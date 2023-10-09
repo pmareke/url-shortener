@@ -13,7 +13,7 @@ class LinksController < ApplicationController
       short_url = Shortener.short(url)
       @link = Link.new(url: url, short_url: short_url)
       if @link.save
-        redirect_to root_path, notice: "#{request.host}/#{@link.short_url}"
+        redirect_to root_path, notice: "#{root_url}#{@link.short_url}"
       else
         render :new, :unprocessable_entity
       end
