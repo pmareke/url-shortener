@@ -4,7 +4,7 @@
 
 - [X] Create Rails app.
 - [X] Install Rspec.
-- [ ] Implement Shortener service.
+- [X] Implement Shortener service.
 - [ ] Create Link model.
 - [ ] Create Link resource (only :create).
 - [ ] Add route to redirect from short url.
