@@ -8,6 +8,5 @@
 - [X] Create Link model.
 - [X] Create Link resource (only :create).
 - [X] Add route to redirect from short url.
-- [ ] Add route to get info about a short url.
-- [ ] Add cache
-
+- [X] Add cache
+- [ ] Add TailwindCSS
