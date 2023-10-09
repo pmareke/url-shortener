@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <% flash.each do |type, msg| %>
+      <%= link_to msg, id: "short_link_url" do %>
+        <%= msg %>
+      <% end %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
