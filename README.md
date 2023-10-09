@@ -9,4 +9,4 @@
 - [X] Create Link resource (only :create).
 - [X] Add route to redirect from short url.
 - [X] Add cache
-- [ ] Add TailwindCSS
+- [X] Add TailwindCSS
