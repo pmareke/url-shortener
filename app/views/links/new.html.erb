@@ -1,7 +1,7 @@
 <%= form_for @link do |form| %>
   <div class="m-auto max-w-xl flex flex-col justify-center">
     <div class="flex items-center">
-      <%= form.text_field :url, autofocus: true, class: "flex-1" %>
+      <%= form.text_field :url, autofocus: true, class: "focus:border-black focus:ring-0 flex-1" %>
     </div>
     <div class="mt-8 m-auto">
       <%= form.submit "Short url", class: "px-4 py-2 rounded-md bg-green-600 text-white" %>
