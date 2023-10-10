@@ -10,8 +10,8 @@ RSpec.describe "Redirections", type: :system do
     url = "https://github.com/pmareke/url-shortener"
     visit "/"
 
-    fill_in "Link", with: url
-    click_button "Create short url"
+    find(:css, "#url-input").set url
+    click_button "Short url"
 
     expect(page).to have_selector(:css, '#short_link_url')
   end
