@@ -14,4 +14,13 @@ RSpec.describe Link, type: :model do
 
     expect(link.valid?).to be(false)
   end
+
+  it 'should have an URL format' do
+    url = "pmareke/url-shortener"
+    short_url = Shortener.short url
+
+    link = Link.new(url: url, short_url: short_url)
+
+    expect(link.valid?).to be(false)
+  end
 end

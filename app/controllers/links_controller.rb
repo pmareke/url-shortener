@@ -6,12 +6,6 @@ class LinksController < ApplicationController
 
   def create
     url = url_params[:url]
-    if url.empty?
-      @link = Link.new
-      render :new
-      return
-    end
-
     if short_url = find_short_url_for_link(url)
       redirect_to root_path, notice: "#{root_url}#{short_url}"
       return
@@ -23,7 +17,8 @@ class LinksController < ApplicationController
       Rails.cache.write(url, short_url)
       redirect_to root_path, notice: "#{root_url}#{short_url}"
     else
-      render :new, :unprocessable_entity
+      @link = Link.new
+      render :new
     end
   end
 
