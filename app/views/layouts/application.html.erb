@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body class="h-screen flex flex-col items-center justify-center">
     <div class="p-16 shadow-2xl">
-      <div class="text-7xl mb-16 font-bold" >URL Shortener</div>
+      <div class="text-8xl mb-8 font-bold" >URL Shortener</div>
 
       <% flash.each do |type, msg| %>
         <div class="mb-8 flex flex-col bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
           <strong class="font-bold m-auto">This is the short url!</strong>
-          <%= link_to msg, id: "short_link_url" do %>
+          <%= link_to msg, id: "short_link_url", class: "flex justify-center" do %>
             <span class="block underline sm:inline"><%= msg %></span>
           <% end %>
         </div>
