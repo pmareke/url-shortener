@@ -26,3 +26,9 @@ end
 
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem "dockerfile-rails", "~> 1.5"
+
+gem "sentry-ruby", "~> 5.12"
+
+gem "sentry-rails", "~> 5.12"
