@@ -6,6 +6,12 @@ class LinksController < ApplicationController
 
   def create
     url = url_params[:url]
+    if url.empty?
+      @link = Link.new
+      render :new
+      return
+    end
+
     if short_url = find_short_url_for_link(url)
       redirect_to root_path, notice: "#{root_url}#{short_url}"
       return
