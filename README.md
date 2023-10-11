@@ -11,6 +11,7 @@
 - [X] Add cache
 - [X] Add TailwindCSS
 - [X] Add validations for empty and valid URLs
+- [ ] Add 'short_url' index.
 - [ ] Design mobile and tablet resolutions
 
 # Design
