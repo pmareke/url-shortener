@@ -9,12 +9,12 @@ describe Shortener do
     expect(short_url).not_to be("")
   end
 
-  it 'the short url should have 32 characters' do
+  it 'the short url should have 8 characters' do
     url = "https://github.com/pmareke/url-shortener"
 
     short_url = Shortener.short(url)
 
-    expect(short_url.size).to be(32)
+    expect(short_url.size).to be(8)
   end
 
   it 'two urls should have different short urls' do
