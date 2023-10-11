@@ -18,4 +18,4 @@
 
 ![Main](./images/main.jpeg)
 
-![Short](./images/short.jpeg)
+![Short](./images/short.png)
