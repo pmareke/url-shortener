@@ -10,6 +10,7 @@
 - [X] Add route to redirect from short url.
 - [X] Add cache
 - [X] Add TailwindCSS
+- [ ] Design mobile and tablet resolutions
 
 # Design
 
