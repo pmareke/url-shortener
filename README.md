@@ -12,7 +12,7 @@
 - [X] Add TailwindCSS
 - [X] Add validations for empty and valid URLs
 - [X] Add `short_url` index.
-- [ ] Design mobile and tablet resolutions
+- [X] Design mobile and tablet resolutions
 
 # Design
 
