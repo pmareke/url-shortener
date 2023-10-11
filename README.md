@@ -6,7 +6,7 @@
 - [X] Install Rspec.
 - [X] Implement Shortener service.
 - [X] Create Link model.
-- [X] Create Link resource (only :create).
+- [X] Create Link resource (only :new and :create).
 - [X] Add route to redirect from short url.
 - [X] Add cache
 - [X] Add TailwindCSS
