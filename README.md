@@ -10,3 +10,9 @@
 - [X] Add route to redirect from short url.
 - [X] Add cache
 - [X] Add TailwindCSS
+
+# Design
+
+![Main](./images/main.jpeg)
+
+![Short](./images/short.jpeg)
