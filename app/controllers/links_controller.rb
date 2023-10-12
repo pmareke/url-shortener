@@ -5,20 +5,12 @@ class LinksController < ApplicationController
   end
 
   def create
-    url = url_params[:url]
-    if short_url = find_short_url_for_url(url)
-      redirect_to root_path, notice: "#{root_url}#{short_url}"
-      return
-    end
-
-    short_url = Shortener.short(url)
-    @link = Link.new(url: url, short_url: short_url)
+    @link = Link.create_link(url)
     if @link.save
-      Rails.cache.write(url, short_url)
-      redirect_to root_path, notice: "#{root_url}#{short_url}"
+      Rails.cache.write(url, @link)
+      redirect_to root_path, notice: "#{root_url}#{@link.short_url}"
     else
-      @link = Link.new
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -28,8 +20,7 @@ class LinksController < ApplicationController
     params.require(:link).permit(:url)
   end
 
-  def find_short_url_for_url(url)
-    return Rails.cache.read(url) || Link.find_by_url(url)&.short_url
+  def url
+    url_params[:url]
   end
-
 end

@@ -1,3 +1,16 @@
+<% if @link.errors.any? %>
+  <div class="m-auto mb-2 md:mb-8 flex flex-col bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+    <h2 class="font-bold">The Link has <%= pluralize(@link.errors.count, "error") %>:</h2>
+    <ul class="list-disc ml-4">
+      <% @link.errors.full_messages.each do |msg| %>
+        <li>
+          <%= msg %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for @link do |form| %>
   <div class="m-auto flex flex-col md:flex-row justify-center items-center p-4 md:p-0">
     <%= form.text_field :url, autofocus: true, id: "url-input", class: "mb-2 md:mb-0 focus:border-black focus:ring-0 flex-1 rounded-l-md" %>

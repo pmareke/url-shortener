@@ -13,9 +13,12 @@
 - [X] Add validations for empty and valid URLs
 - [X] Add `short_url` index.
 - [X] Design mobile and tablet resolutions
+- [X] Style errors
 
 # Design
 
 ![Main](./images/main.jpeg)
 
 ![Short](./images/short.png)
+
+![Errors](./images/errors.png)

@@ -14,7 +14,7 @@ RSpec.describe "Links", type: :system do
     visit "/"
 
     find(:css, "#url-input").set url
-    click_button "Short url"
+    click_button "Create short URL"
 
     expect(page).to have_css("#short_link_url")
   end
@@ -24,12 +24,12 @@ RSpec.describe "Links", type: :system do
     visit "/"
 
     find(:css, "#url-input").set url
-    click_button "Short url"
+    click_button "Create short URL"
 
     visit "/"
 
     find(:css, "#url-input").set url
-    click_button "Short url"
+    click_button "Create short URL"
 
     expect(Link.count).to eq 1
   end

@@ -11,7 +11,7 @@ RSpec.describe "Redirections", type: :system do
     visit "/"
 
     find(:css, "#url-input").set url
-    click_button "Short url"
+    click_button "Create short URL"
 
     expect(page).to have_selector(:css, '#short_link_url')
   end
