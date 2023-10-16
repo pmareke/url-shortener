@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Redirections", type: :system do
   before do
     Capybara.default_host = 'http://localhost:3000'
-    driven_by(:rack_test)
+    driven_by(:selenium)
   end
 
   it 'should redirect to the original url' do
