@@ -12,8 +12,10 @@
 <% end %>
 
 <%= form_for @link do |form| %>
-  <div class="m-auto flex flex-col md:flex-row justify-center items-center p-4 md:p-0">
-    <%= form.text_field :url, autofocus: true, id: "url-input", class: "mb-2 md:mb-0 focus:border-black focus:ring-0 flex-1 rounded-l-md" %>
-    <%= form.submit "Create short URL", class: "h-[42px] px-4 py-2 font-bold bg-green-600 text-white rounded-r-md" %>
+  <div data-controller="links" class="m-auto flex flex-col md:flex-row justify-center items-center p-4 md:p-0">
+    <%= form.text_field :url, autofocus: true, id: "url-input", class: "mb-2 md:mb-0 focus:border-black focus:ring-0 flex-1 rounded-l-md", data: { "links-target": "url"}%>
+    <%= form.submit "Create short URL", class: "h-[42px] px-4 py-2 font-bold bg-green-600 text-white rounded-r-md", data: { "action": "click->links#click" } %>
+  </div>
+  <div id="flash">
   </div>
 <% end %>

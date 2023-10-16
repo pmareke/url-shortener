@@ -8,7 +8,9 @@ class LinksController < ApplicationController
     @link = Link.create_link(url)
     if @link.save
       Rails.cache.write(url, @link)
-      redirect_to root_path, notice: "#{root_url}#{@link.short_url}"
+      respond_to do |format|
+        format.turbo_stream { flash.now[:notice] = "#{root_url}#{@link.short_url}" }
+      end
     else
       render :new, status: :unprocessable_entity
     end
